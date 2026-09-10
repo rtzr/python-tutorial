@@ -1,0 +1,20 @@
+.env
+artifacts/
+outputs/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+
+# Local audio inputs and generated samples
+*.aiff
+*.amr
+*.flac
+*.m4a
+*.mp3
+*.mp4
+*.wav
+data/
+archive_docs/
+.DS_Store

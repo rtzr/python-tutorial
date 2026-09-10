@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rtzr-transcribe"
+version = "0.1.0"
+description = "Simple Korean transcription pipeline with optional RTZR refinement and insight"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-dotenv>=1.0,<2",
+    "requests>=2.32,<3",
+]
+
+[project.scripts]
+rtzr-transcribe = "rtzr_transcribe.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4,<9",
+    "responses>=0.25,<1",
+    "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rtzr_transcribe"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

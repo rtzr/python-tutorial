@@ -29,7 +29,13 @@ Implementation of a web app using only Python's Streamlit and Return Zero's API,
 - **Requirements**: streamlit, requests, pytorch, transformers
 - **Setup**: Install requirement librarys, Run streamlit and submit your information. For more information, visit the project's [README](./streamlit-webapp/).
 
+### 4. RTZR Batch STT Refinement & Insight CLI
 
+This project provides a Python CLI for transcribing local audio files with the RTZR Batch STT API. It supports speaker diarization by default and can optionally refine transcripts or generate Korean insights.
+
+- **Requirements**: Python 3.10+, `uv`
+- **Enterprise features**: Transcript refinement and insight generation require prior access approval.
+- **Setup and usage**: See the [project README](./stt-refinement-insight/).
 
 ## Installation
 
